@@ -1,6 +1,7 @@
 const player        =   document.getElementById("player")  
 const rollDice      =   document.getElementById("roll")
 const newGame       =   document.getElementById("new-game")
+const rollScore     =   document.getElementById("roll")
 
 // const plyrDice01    =   document.getElementById("plyr-dice-1")
 // const plyrDice02    =   document.getElementById("plyr-dice-2")
@@ -27,6 +28,8 @@ rollDice.addEventListener("click", function(){
     player01.removDice()
 });
 
-newGame.addEventListener("click", function(){
-    player.innerHTML    =   " "
-});
+
+
+// newGame.addEventListener("click", function(){
+//     player.innerHTML    =   " "
+// });
