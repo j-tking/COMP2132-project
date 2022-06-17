@@ -1,0 +1,168 @@
+/* ****************  Jeremy King  **************** */
+
+
+/* ==========  General Styling  ========== */
+
+html {
+    height: 100%;
+}
+body {
+    font-family: arponasans, sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+main {
+    padding: 20px;
+}
+h1 {
+    color: whitesmoke;
+    font-family: arponasans, sans-serif;
+    font-weight: 500;
+    font-size: 3em;
+}
+h2, h3, h4 {
+    font-family: arponasans, sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+/* ****  Media adjust for main heading in larger screens  **** */
+@media screen and (min-width: 768px) {
+    .main-heading {
+        font-size: 3em;
+    }
+}
+p {
+    letter-spacing: 1px;
+    padding: 5px;
+}
+ul li {
+    list-style: none;
+    margin: 5px;
+}
+.dice-list li {
+    display: inline-block;
+}
+article > div {
+    background-color: #c3e7e4;
+    box-shadow: 5px 5px #7c9392;
+}
+a { 
+    text-decoration: none;
+    margin: auto;
+}
+#wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (min-width: 768px){
+    #wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.title-wrap{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.title-wrap img {
+    height: 75px;
+    max-width: 75px;
+}
+/* ========== Img ========== */
+
+img {
+    border-radius: 10px;
+    padding: 5px;
+    height: auto;
+    max-width: 100%;
+}
+.img-contain {
+    display: flex;
+    height: 75px;
+    width: 75px;
+}
+
+/* ==========  Container for players  ==========  */
+.game-contain {
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.dice-contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* ==========  Buttons  ========== */
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ==========  Header and Footer  ========== */
+
+header {
+    padding: 0;
+    margin: 0;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #4f6b6b;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 10px 4px -4px gray;
+}
+.header h1 {
+    padding: 5px 10px;
+}
+.header h2 {
+    color: whitesmoke;
+    padding: 5px 10px;
+}
+@media screen and (min-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .header-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+}
+
+/* Footer */
+
+address {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.copyright {
+     text-align: center;
+ }
+ .jq-off {
+     font-size: 1.5em;
+     color: #fe615a;
+     font-weight: 700;
+}
