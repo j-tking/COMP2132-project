@@ -2,9 +2,10 @@
 
 class Player{
     constructor( name ){
-        this.name = name;
-        this.dice = [];
-        this.score = [];
+        this.name           = name;
+        this.dice           = [];
+        this.score          = [];
+        this.totalScore     =   0;
     }
     assignDice( dice ){
         if( dice instanceof Dice ){
@@ -13,10 +14,9 @@ class Player{
         };
     }
     calculateScore(){
-        var score = 0;
         for (let i = 0; i < this.score.length; i++){
-            score += this.score[i];
-        }return score
+            this.totalScore += this.score[i];
+        }return this.totalScore
     }
     removDice(){
         this.dice = [];

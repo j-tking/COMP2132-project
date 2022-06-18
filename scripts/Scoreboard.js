@@ -2,11 +2,21 @@
 
 class Scoreboard{
     constructor(){
-        this.roll = Dice.value
+        this.playerRoll     =   0;
+        this.playerTotal    =   0;
+        this.opponentRoll   =   0;
+        this.opponentTotal  =   0;
     }
-    showScore(){
-        let score = ""
-        score = this.roll
-        return string
+    updateScore( value ){
+        this.playerTotal     =   value
+        return value
+    }
+    describeSelf(){
+        let score  = " "
+
+        score      =   `<h4>Scoreboard</h4>`
+        score      +=  `<p>This Roll: ${this.playerRoll}</p>`
+        score      +=  `<p>Total: ${this.playerTotal}</p>`
+        return score
     }
 }

@@ -86,7 +86,7 @@ a {
 
 /* ==========  Container for players  ==========  */
 .game-contain {
-    height: fit-content;
+    height: 500px;
     width: 400px;
     border-radius: 10px;
     border: 4px solid #7c9392;
