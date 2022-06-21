@@ -3,10 +3,10 @@ const rollDice      =   document.getElementById("roll")
 const newGame       =   document.getElementById("new-game")
 const rollScore     =   document.getElementById("roll-score")
 const scoreBoard    =   document.getElementById("scoreboard")
+const rulesButton   =   document.getElementById("rules-button")
+const rules         =   document.getElementById("rules")
 
-// const plyrDice01    =   document.getElementById("plyr-dice-1")
-// const plyrDice02    =   document.getElementById("plyr-dice-2")
-
+rules.style.display = "none";
 
 let player01            =   new Player("Jeremy");
 let dice01              =   new Dice();
@@ -34,4 +34,13 @@ rollDice.addEventListener("click", function(){
     scoreBoard.innerHTML    = playerScore.describeSelf();
     player.innerHTML        = player01.describeSelf();
     player01.removDice()
+});
+
+
+rulesButton.addEventListener("click", function(){
+    if( rules.style.display === "none") {
+        rules.style.display = "block";
+    }else{
+        rules.style.display = "none";
+    }
 });

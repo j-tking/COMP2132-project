@@ -131,6 +131,17 @@ button {
     align-items: center;
     justify-content: center;
 }
+.rules {
+    background-color: beige;
+    border: 4px solid #7c9392;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.rules p {
+    width: 600px;
+}
 /* ==========  Header and Footer  ========== */
 
 header {
