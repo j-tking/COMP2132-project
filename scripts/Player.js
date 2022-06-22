@@ -5,6 +5,7 @@ class Player{
         this.name           = name;
         this.dice           = [];
         this.score          = [];
+        this.rollScore      =   0;
         this.totalScore     =   0;
     }
     assignDice( dice ){
@@ -13,14 +14,25 @@ class Player{
             this.score.push( dice.value )
         };
     }
-    calculateScore(){
-        for (let i = 0; i < this.score.length; i++){
-            this.totalScore += this.score[i];
-        }return this.totalScore
+    calculateRollScore(){
+        for (let i = 0; i < this.score.length; i ++){
+            if( this.score[i] === 1){
+                this.rollScore = 0
+                break
+            }else{
+                this.rollScore += this.score[i]
+            }
+        }return this.rollScore
     }
+    calculateTotalScore( rollscore ){
+        this.totalScore += rollscore
+        return this.totalScore
+    }
+    
     removDice(){
-        this.dice = [];
-        this.score = [];
+        this.dice       = [];
+        this.score      = [];
+        this.rollScore  = 0;
     }
     describeSelf(){
         let string  =   ``

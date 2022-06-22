@@ -7,9 +7,13 @@ class Scoreboard{
         this.opponentRoll   =   0;
         this.opponentTotal  =   0;
     }
-    updateScore( value ){
-        this.playerTotal     =   value
-        return value
+    updateRollScore( value ){
+        this.playerRoll     =   value
+        return this.playerRoll
+    }
+    updateTotalScore( value ){
+        this.playerTotal    = value
+        return this.playerTotal
     }
     describeSelf(){
         let score  = " "

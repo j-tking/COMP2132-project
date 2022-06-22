@@ -37,37 +37,43 @@
                     <h2>DICE GAME</h2>
                     <!-- <img src="../images/dice_roll.gif" alt="dice rolling"> -->
                 </div>
+                <div id="results-popup">
+                    <h3>Game Results</h3>
+                    <button onclick="window.location.reload();">Play Again?</button>
+                </div>
                 <div id="wrapper">
                     <section class="game-contain">
+                        <!-- ************  Player  ************ -->
                         <section id="player">
                             <h3>Player:</h3>
                             <div class="dice-contain">
-                                <!-- <div id="plyr-dice-1"> -->
                                     <img class="img-contain" id="plyr-dice-1" src="./images/dice-1.jpg" alt=""> 
-                                <!-- </div> -->
-                                <!-- <div id="plyr-dice-2"> -->
+                              
                                     <img class="img-contain" id="plyr-dice-2" src="./images/dice-1.jpg" alt="">
-                                <!-- </div> -->
                             </div>
                         </section>
-                        <section class="scoreboard" id="scoreboard">
-                            <!-- <h4>Scoreboard</h4>
-                            <div class="score">
-                                <p id="roll-score">This Roll:</p>
-                                <p id="total-score">Total:</p>
-                            </div> -->
+                        
+                        <section class="scoreboard" id="plyr-scoreboard">
+                            <h4>Scoreboard</h4>
                         </section>
+                    
                     </section>
+                    
                     <section class="game-contain">
-                        <h3>Opponent</h3>
-                        <div class="dice-contain">
-                            <div id="opp-dice-1">
-                                Dice 1
+                        <!-- ************  Opponent  ************ -->
+                        <section id="opponent">
+                            <h3>Opponent:</h3>
+                            <div class="dice-contain">
+                                <img class="img-contain" id="plyr-dice-1" src="./images/dice-1.jpg" alt=""> 
+                              
+                                <img class="img-contain" id="plyr-dice-2" src="./images/dice-1.jpg" alt="">
+                                
                             </div>
-                            <div id="opp-dice-2">
-                                Dice 2
-                            </div>
-                        </div>
+                        </section>
+                        <section class="scoreboard" id="opp-scoreboard">
+                            <h4>Scoreboard</h4>
+                        </section>
+
                     </section>
                 </div>
                 <div class="buttons">
