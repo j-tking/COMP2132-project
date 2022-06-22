@@ -7,6 +7,18 @@ const newGame           =   document.getElementById("new-game")
 const resultsPop        =   document.getElementById("results-popup")
 
 resultsPop.style.opacity    =   "0"
+let opacityValue            =   0;
+let resultsPopHandler;
+
+function fadeIn(){
+    opacityValue = opacityValue + .05;
+    if(opacityValue <= 1){
+        resultsPop.style.opacity = opacityValue;
+        requestAnimationFrame( fadeIn );
+    }else{
+        resultsPop.style.opacity = 1;
+    }    
+}
 
 // Construct Player object, Player Scoreboard and display them
 let player01                =   new Player("Jeremy");
@@ -27,7 +39,7 @@ let rollCount               =   0;
 rollDice.addEventListener("click", function(){  
 
     if ( rollCount === 2 ){
-        resultsPop.style.opacity = "1"
+        resultsPopHandler = requestAnimationFrame( fadeIn );
 
     }
 
@@ -43,9 +55,26 @@ rollDice.addEventListener("click", function(){
     player.innerHTML            = player01.describeSelf();
     plyrScoreBoard.innerHTML    = playerScore.describeSelf();
 
-    player01.removDice()
+    player01.removDice();
+
+    dice01.roll();
+    dice02.roll();
+    opponent01.assignDice(dice01)
+    opponent01.assignDice(dice02)
+    opponent01.calculateRollScore();
+    opponent01.calculateTotalScore( opponent01.rollScore );
+    opponentScore.updateRollScore( opponent01.rollScore );
+    opponentScore.updateTotalScore( opponent01.totalScore )
+
+    opponent.innerHTML      =   opponent01.describeSelf();
+    oppScoreBoard.innerHTML =   opponentScore.describeSelf();
+
+    opponent01.removDice();
 
     rollCount ++;
+
+    var thisGameResults     = new Results(player01.totalScore, opponent01.totalScore);
+    resultsPop.innerHTML    = thisGameResults.gameResults(fadeIn);
 });
 
 

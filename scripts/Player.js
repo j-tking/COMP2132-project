@@ -22,6 +22,9 @@ class Player{
             }else{
                 this.rollScore += this.score[i]
             }
+        if( this.score[0] === this.score[1]){
+            this.rollScore = (this.score[0] + this.score[1]) * 2
+        }
         }return this.rollScore
     }
     calculateTotalScore( rollscore ){
