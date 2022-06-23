@@ -75,6 +75,9 @@ a {
     align-items: center;
     flex-direction: row;
 }
+.title-wrap h2 {
+    font-size: 3em;
+}
 .title-wrap img {
     height: 75px;
     max-width: 75px;
@@ -110,6 +113,7 @@ img {
     margin: 20px 5px 0px 5px;
     border-radius: 5px;
     border: 2px solid black;
+    background-color: beige;
 }
 .score {
     display: flex;
@@ -142,18 +146,19 @@ button {
 
 /* ==========  Results PopUp  ========== */
 
-#results-popup{
+#results-popup {
     display: flex;
     align-items: center;
     flex-direction: column;
     width:300px;
+    height: 300px;
     padding:10px;
     background-color: #4f6b6b;
     color:white;
     border:solid 1px black;
     border-radius: 10px;
     box-shadow:0px 0px 5px yellow, 5px 5px 5px black;
-    position:absolute;
+    position:fixed;
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
@@ -166,9 +171,21 @@ button {
     ensure pointer events will go 'through' this section tag 
     since it might  otherwise overlap the buttons and make them unclickable
     */
-    /* pointer-events: none; */
+    pointer-events: none;
 
     z-index:1000;
+}
+#results-popup h3 {
+    margin: 0px;
+    padding: 20px;
+    
+}
+#results-pop p {
+    margin-top: 40px;
+}
+#results-popup button {
+    margin-top: 30px;
+    pointer-events: all;
 }
 
 /* ==========  Header and Footer  ========== */

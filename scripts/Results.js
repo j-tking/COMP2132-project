@@ -7,7 +7,7 @@ class Results{
     }
     gameResults(){
         let output  = ``
-        output      =   `<h3>Game Results</h3>`
+        output      = `<h3>Game Results</h3>`
 
         if( this.plyrTotal > this.oppTotal){
             output += `<p> Congratulations!!!  You won!!</p>`

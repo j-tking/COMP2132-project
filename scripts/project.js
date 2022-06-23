@@ -78,6 +78,8 @@ rollDice.addEventListener("click", function(){
 });
 
 
+// try and write this part using jQuery for the toggle show/hide......
+
 const rulesButton       =   document.getElementById("rules-button")
 const rules             =   document.getElementById("rules")
 
