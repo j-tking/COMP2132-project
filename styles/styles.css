@@ -8,6 +8,7 @@ body {
   height: 100%;
   width: 100%;
   margin: auto;
+  background-color: #bcd0cf;
 }
 
 main {
@@ -85,7 +86,9 @@ a {
 }
 
 .title-wrap h2 {
-  font-size: 3em;
+  font-size: 4em;
+  letter-spacing: 1px;
+  text-shadow: 4px 2px rgb(218, 218, 81);
 }
 
 .title-wrap img {
@@ -119,7 +122,6 @@ a {
   ensure pointer events will go 'through' this section tag 
   since it might  otherwise overlap the buttons and make them unclickable
   */
-  /* pointer-events: none; */
   z-index: 1000;
 }
 
@@ -146,6 +148,7 @@ a {
   height: fit-content;
   width: 400px;
   border-radius: 10px;
+  background-color: rgb(227, 227, 227);
   box-shadow: 5px 5px 5px #586666;
   border: 4px solid #7c9392;
   margin: 10px;
@@ -181,8 +184,16 @@ img {
 
 #player h4 {
   margin: 10px 0px 10px 50px;
+  text-shadow: 2px 2px yellowgreen;
+  color: rgb(40, 39, 39);
   /* display: block;
   text-align: center; */
+}
+
+#opponent h4 {
+  margin: 10px 0px 10px 50px;
+  text-shadow: 2px 2px yellowgreen;
+  color: rgb(40, 39, 39);
 }
 
 .scoreboard {
@@ -200,9 +211,23 @@ img {
 
 /* ==========  Buttons  ========== */
 button {
+  border-radius: 10px;
   margin: 10px;
   padding: 10px;
   font-size: 1em;
+  letter-spacing: 1px;
+  background-color: beige;
+  box-shadow: 5px 5px 5px #7c9392;
+}
+
+button:hover {
+  background-color: #7c9392;
+  color: aliceblue;
+  transition: 0.5s;
+}
+
+#play-button {
+  margin-top: auto;
 }
 
 .buttons {
@@ -218,6 +243,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
 }
 
 .rules p {
@@ -236,7 +262,7 @@ button {
   color: white;
   border: solid 1px black;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px yellow, 5px 5px 5px black;
+  box-shadow: 5px 5px 10px rgb(145, 219, 76), 10px 10px 10px black;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -245,7 +271,7 @@ button {
   animate this opacity property
   from 0 to 1    
   */
-  opacity: 0;
+  opacity: 1;
   /* 
   ensure pointer events will go 'through' this section tag 
   since it might  otherwise overlap the buttons and make them unclickable

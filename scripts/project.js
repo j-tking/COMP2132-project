@@ -9,17 +9,13 @@ const newGame           =   document.getElementById("new-game")
 const resultsPop        =   document.getElementById("results-popup")
 
 
-
-const $gameStartPop     =   $("#game-start");
+const $gameStartPop         =   $("#game-start");
 $gameStartPop.hide();
 $gameStartPop.fadeIn("slow", "linear")
-
-// const $resultsPop    =   $("#results-popup")
 
 resultsPop.style.opacity    =   "0";
 let opacityValue            =   0;
 let resultsPopHandler;
-
 
 function fadeIn(){
     opacityValue = opacityValue + .05;
@@ -31,7 +27,6 @@ function fadeIn(){
     }    
 }
 
-
 // Construct two Dice Objects to be rolled
 let dice01                  =   new Dice(1);
 let dice02                  =   new Dice(1);
@@ -39,6 +34,8 @@ let dice02                  =   new Dice(1);
 // Construct Player object, Player Scoreboard and display them
 let player01                =   new Player();
 let playerScore             =   new Scoreboard();
+player01.assignDice(dice01);
+player01.assignDice(dice02);
 
 plyrScoreBoard.innerHTML    =   playerScore.describeSelf();
 
@@ -50,30 +47,37 @@ opponent01.assignDice(dice02);
 
 oppScoreBoard.innerHTML     =   opponentScore.describeSelf();
 
+// General game layout starts here with the playButton
+playButton.addEventListener("click", function(e){
+    let plyrName                =   document.getElementById("name")
+    let plyrNamePlaceHolder     =   document.getElementsByName("name")
 
-playButton.addEventListener("click", function(){
-    let plyrName                =   document.getElementById("name").value
-    player01.name               =   plyrName
-    player01.assignDice(dice01)
-    player01.assignDice(dice02)
-    player.innerHTML            =   player01.describeSelf();
-    player01.removDice();
+    if( plyrName.value.length === 0){
+        plyrName.style.backgroundColor = "#faaeaa"
+        plyrName.style.border   = "solid 2px yellow"
+        plyrNamePlaceHolder[0].placeholder  = "Your name is missing!!"
+        e.preventDefault();
 
-    opponent01.name             =   "The Bot"
-    opponent.innerHTML          =   opponent01.describeSelf();
-    opponent01.removDice();
-
-    // gameStartPop.style.display  =   "none"
-    $gameStartPop.fadeOut("slow", "linear");
+    }else{ 
+        player01.name               =   plyrName.value
+        player.innerHTML            =   player01.describeSelf();
+        player01.removDice();
+    
+        opponent01.name             =   "The Bot"
+        opponent.innerHTML          =   opponent01.describeSelf();
+        opponent01.removDice();
+    
+        $gameStartPop.fadeOut("slow", "linear");}
 });
 
 let rollCount               =   0;
 
+// Game play runs here with the rollDice button
 rollDice.addEventListener("click", function(){  
 
     if ( rollCount === 2 ){
         resultsPopHandler = requestAnimationFrame( fadeIn );
-        // $resultsPop.fadeIn("slow", "linear")
+        rollDice.style.pointerEvents = "none"
     }
 
     dice01.roll();
@@ -106,14 +110,14 @@ rollDice.addEventListener("click", function(){
 
     rollCount ++;
 
+    console.log(resultsPop)
     var thisGameResults     = new Results(player01.totalScore, opponent01.totalScore);
+    console.log(thisGameResults)
     resultsPop.innerHTML    = thisGameResults.gameResults(fadeIn);
-    // $resultsPop.html(thisGameResults.gameResults);
-    // $resultsPop.fadeIn("slow", "linear")
+    console.log(resultsPop)
 });
 
 // using jQuery .slideToggle() for the show/hide rules
-
 const $showRulesButton      =   $("#rules-button")
 $(".rules").hide();
 
