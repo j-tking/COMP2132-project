@@ -40,7 +40,7 @@ class Player{
     describeSelf(){
         let string  =   ``
 
-        string = `<h3>Player: ${this.name}</h3>`
+        string = `<h4>${this.name}</h4>`
         
         string += `<ul>`
         this.dice.forEach(function( dice ){

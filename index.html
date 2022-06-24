@@ -8,18 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JKing Assignment 08</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <!-- ********  Proxima Nova Font  ******** -->
     <!-- <link rel="stylesheet" href="https://use.typekit.net/dhn0ddn.css"> -->
     
     <!-- ********  ArponaSans Font  ******** -->
     <link rel="stylesheet" href="https://use.typekit.net/zsc0rtu.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
     <script src="./scripts/Dice.js" defer></script>
     <script src="./scripts/Player.js" defer></script>
     <script src="./scripts/Scoreboard.js" defer></script>
     <script src="./scripts/Results.js" defer></script>
     <script src="./scripts/project.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <noscript>
@@ -39,19 +39,28 @@
                     <h2>DICE GAME</h2>
                     <!-- <img src="../images/dice_roll.gif" alt="dice rolling"> -->
                 </div>
+                <div id="game-start">
+                    <h3>Welcome to the dice game!!</h3>
+                    <p>To see the rules click on the Game Rules button.</p>
+                    <form id="form">
+                        <label for="name">Enter your name here:</label><br>
+                        <input type="text" id="name" name="name" autocomplete="off"><br>
+                    </form>
+                    <button id="play-button">Lets Play!!</button>
+                </div>
                 <div id="results-popup">
                     <h3>Game Results</h3>
                     <button onclick="window.location.reload();">Play Again?</button>
                 </div>
                 <div id="wrapper">
                     <section class="game-contain">
-                        <!-- ************  Player  ************ -->
+                        
+                        <h3>Player:</h3>
                         <section id="player">
-                            <h3>Player:</h3>
                             <div class="dice-contain">
-                                    <img class="img-contain" id="plyr-dice-1" src="./images/dice-1.jpg" alt=""> 
+                                    <img class="img-contain" src="./images/dice-1.jpg" alt=""> 
                               
-                                    <img class="img-contain" id="plyr-dice-2" src="./images/dice-1.jpg" alt="">
+                                    <img class="img-contain" src="./images/dice-1.jpg" alt="">
                             </div>
                         </section>
                         
@@ -62,9 +71,9 @@
                     </section>
                     
                     <section class="game-contain">
-                        <!-- ************  Opponent  ************ -->
+                        
+                        <h3>Opponent:</h3>
                         <section id="opponent">
-                            <h3>Opponent:</h3>
                             <div class="dice-contain">
                                 <img class="img-contain" id="plyr-dice-1" src="./images/dice-1.jpg" alt=""> 
                               
