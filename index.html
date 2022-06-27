@@ -14,6 +14,7 @@
     
     <!-- ********  ArponaSans Font  ******** -->
     <link rel="stylesheet" href="https://use.typekit.net/zsc0rtu.css">
+    <!-- ********  jQuery  ******** -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
     <script src="./scripts/Dice.js" defer></script>
     <script src="./scripts/Player.js" defer></script>
@@ -43,14 +44,19 @@
                     <h3>Welcome to the dice game!!</h3>
                     <p>To see the rules click on the Game Rules button.</p>
                     <form id="form">
-                        <label for="name">Enter your name here:</label><br>
+                        <label for="name">Enter your name:</label><br>
                         <input type="text" id="name" name="name" placeholder="Enter name here..." autocomplete="off"><br>
                     </form>
+                    <p>Click on Lets Play to get started....</p>
                     <button id="play-button">Lets Play!!</button>
                 </div>
                 <div id="results-popup">
                     <h3>Game Results</h3>
-                    <button onclick="window.location.reload();">Play Again?</button>
+
+                    <button id="play-again-butt">Play Again?</button>
+
+                    <!-- <button onclick="window.location.reload();">Play Again?</button> -->
+
                 </div>
                 <div id="wrapper">
                     <section class="game-contain">
@@ -106,7 +112,9 @@
                             gets a score of 3+2=5</p>
                         </div>
                     </section>
-                
+                <div id="jq-off">
+                    <p class="jq-off">jQuery is off!!</p>
+                </div>
             </main>
         <footer>
             <div class="header">

@@ -17,7 +17,7 @@ class Results{
             output += `<p> The game was a draw!!</p>`
             output += `<p> Nobody won....</p>`
         }else{
-            output += `<p> Sorry, you lost by ${this.oppTotal - this.plyrTotal} points.....</p>`
+            output += `<p class="lost"> Sorry, you lost by ${this.oppTotal - this.plyrTotal} points.....</p>`
         }
         output += `<button onclick="window.location.reload();">Play Again?</button>`
         return output

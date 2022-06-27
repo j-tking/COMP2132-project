@@ -102,7 +102,7 @@ a {
   align-items: center;
   flex-direction: column;
   width: 500px;
-  height: 300px;
+  height: 400px;
   padding: 10px;
   background-color: #4f6b6b;
   color: white;
@@ -117,7 +117,6 @@ a {
   animate this opacity property
   from 0 to 1    
   */
-  /* opacity:0; */
   /* 
   ensure pointer events will go 'through' this section tag 
   since it might  otherwise overlap the buttons and make them unclickable
@@ -209,14 +208,14 @@ img {
   justify-content: space-evenly;
 }
 
-/* ==========  Buttons  ========== */
+/* ==========  Buttons  ==========  */
 button {
-  border-radius: 10px;
-  margin: 10px;
   padding: 10px;
-  font-size: 1em;
+  margin: 10px;
   letter-spacing: 1px;
+  font-size: 1em;
   background-color: beige;
+  border-radius: 10px;
   box-shadow: 5px 5px 5px #7c9392;
 }
 
@@ -227,7 +226,8 @@ button:hover {
 }
 
 #play-button {
-  margin-top: auto;
+  padding: 20px;
+  margin: auto;
 }
 
 .buttons {
@@ -277,7 +277,7 @@ button:hover {
   since it might  otherwise overlap the buttons and make them unclickable
   */
   pointer-events: none;
-  z-index: 1000;
+  z-index: 900;
 }
 
 #results-popup h3 {
@@ -292,6 +292,10 @@ button:hover {
 #results-popup button {
   margin-top: 30px;
   pointer-events: all;
+}
+
+.lost {
+  color: #faaeaa;
 }
 
 /* ==========  Header and Footer  ========== */
