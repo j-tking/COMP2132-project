@@ -52,45 +52,40 @@
                 </div>
                 <div id="results-popup">
                     <h3>Game Results</h3>
-
                     <button id="play-again-butt">Play Again?</button>
-
-                    <!-- <button onclick="window.location.reload();">Play Again?</button> -->
-
                 </div>
                 <div id="wrapper">
+
+                    <!-- =====  Player section  ===== -->
+
                     <section class="game-contain">
-                        
                         <h3>Player:</h3>
-                        <section id="player">
+                        <div id="player">
                             <div class="dice-contain">
                                     <img class="img-contain" src="./images/dice-1.jpg" alt=""> 
                               
                                     <img class="img-contain" src="./images/dice-1.jpg" alt="">
                             </div>
-                        </section>
-                        
+                        </div>
                         <section class="scoreboard" id="plyr-scoreboard">
                             <h4>Scoreboard</h4>
                         </section>
-                    
                     </section>
-                    
+
+                    <!-- =====  Opponent section ===== -->
+
                     <section class="game-contain">
-                        
                         <h3>Opponent:</h3>
-                        <section id="opponent">
+                        <div id="opponent">
                             <div class="dice-contain">
                                 <img class="img-contain" id="plyr-dice-1" src="./images/dice-1.jpg" alt=""> 
                               
                                 <img class="img-contain" id="plyr-dice-2" src="./images/dice-1.jpg" alt="">
-                                
-                            </div>
-                        </section>
+                                </div>
+                        </div>
                         <section class="scoreboard" id="opp-scoreboard">
                             <h4>Scoreboard</h4>
                         </section>
-
                     </section>
                 </div>
                 <div class="buttons">
@@ -102,14 +97,15 @@
                 </div>
                     <section id="rules">
                         <div class="rules">
-                        <p>The scoring for the game works as follows:<br>
-                            - If any of the players two dice comes up as a 1 then the score for that round for the player
-                            is 0. eg: if the player rolls a 6 and 1, they get a score of 0<br>
-                            - If the player rolls a pair of the same numbers then the players score is the total of the
-                            two dice times 2. eg: if he player rolls 5 and 5, they get a score of (5+5)*2=20<br>
-                            - If the player rolls any other combination of dice other than the ones mentioned above
-                            then the players score is the total value of the two dice, eg: player rolls a 3 and 2, player
-                            gets a score of 3+2=5</p>
+                            <h3>Game Rules</h3>
+                            <p>The scoring for the game works as follows:<br>
+                                - If any of the players two dice comes up as a 1 then the score for that round for the player
+                                is 0. eg: if the player rolls a 6 and 1, they get a score of 0<br>
+                                - If the player rolls a pair of the same numbers then the players score is the total of the
+                                two dice times 2. eg: if he player rolls 5 and 5, they get a score of (5+5)*2=20<br>
+                                - If the player rolls any other combination of dice other than the ones mentioned above
+                                then the players score is the total value of the two dice, eg: player rolls a 3 and 2, player
+                                gets a score of 3+2=5</p>
                         </div>
                     </section>
                 <div id="jq-off">
@@ -134,6 +130,5 @@
             </address>
             <p class="copyright"><small>&copy; Jeremy King 2022</small></p>
         </footer>
-    </div>
 </body>
 </html>

@@ -337,7 +337,7 @@ header {
     justify-content: space-evenly;
   }
 }
-/* Footer */
+/* =========  Footer  ========= */
 address {
   display: flex;
   justify-content: space-between;
@@ -346,6 +346,23 @@ address {
 
 .copyright {
   text-align: center;
+}
+
+.back-to-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-index a {
+  color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  letter-spacing: 1px;
+  font-size: 2em;
+  background-color: #4f6b6b;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #7c9392;
 }
 
 .jq-off {

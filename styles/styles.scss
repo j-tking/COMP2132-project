@@ -355,7 +355,7 @@ button {
       justify-content: space-evenly;
     }
   }
-  /* Footer */
+  /* =========  Footer  ========= */
   address {
     display: flex;
     justify-content: space-between;
@@ -366,6 +366,20 @@ button {
     text-align: center;
   }
   
+//   styling for <a> tag in 404 page
+
+.back-to-index {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.back-to-index a {
+    color: #ffffff;
+    @include button-size(20px, 20px );
+    @include button-style(1px, 2em, $primary_background_color, 10px);
+    box-shadow: 5px 5px 5px #7c9392;
+
+}
   .jq-off {
     font-size: 1.5em;
     color: #fe615a;
