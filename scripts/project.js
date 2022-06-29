@@ -50,7 +50,7 @@ oppScoreBoard.innerHTML     =   opponentScore.describeSelf();
 // remove pointer-events from rollDice so it cannot be clicked until the game has started
 rollDice.style.pointerEvents = "none"
 
-// == >  General game layout starts here using playButton and plyrName input to start the game
+// ==== >  General game layout starts here using playButton and plyrName input to start the game
 playButton.addEventListener("click", function(e){
     let plyrName                =   document.getElementById("name")
     let plyrNamePlaceHolder     =   document.getElementsByName("name")
@@ -100,6 +100,7 @@ rollDice.addEventListener("click", function(){
     player01.calculateTotalScore( player01.rollScore );
     playerScore.updateRollScore( player01.rollScore );
     playerScore.updateTotalScore( player01.totalScore )
+
     // upadate the DOM with images of the dice rolled as well as the score after each roll and total score on the scoreboard
     player.innerHTML            = player01.describeSelf();
     plyrScoreBoard.innerHTML    = playerScore.describeSelf();
@@ -143,3 +144,4 @@ $showRulesButton.click(function(){
 // check to make sure jQuery is turned on
 const $jQueryCheck      =   $("#jq-off")
 $jQueryCheck.hide();
+

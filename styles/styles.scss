@@ -198,6 +198,16 @@ html {
     padding: 5px;
     height: auto;
     max-width: 100%;
+    // animation: spin 2s;
+  }
+
+  .spin {
+    animation: spin 1s;
+  }
+  @keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
   }
   
   .img-contain {

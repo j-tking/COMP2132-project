@@ -44,7 +44,7 @@ class Player{
         
         string += `<ul>`
         this.dice.forEach(function( dice ){
-            string += `<li>${dice.describeSelf()}</li>`
+            string += `<li class="spin">${dice.describeSelf()}</li>`
         });
         string += `</ul>`
         
