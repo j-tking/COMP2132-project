@@ -6,6 +6,7 @@ const oppScoreBoard     =   document.getElementById("opp-scoreboard")
 const rollDice          =   document.getElementById("roll")
 const playAgainButton   =   document.getElementById("play-again-butt")
 const resultsPop        =   document.getElementById("results-popup")
+const images            =   document.querySelectorAll("img")
 
 // using jQuery to fadeIn the gameStartPop display
 const $gameStartPop         =   $("#game-start");

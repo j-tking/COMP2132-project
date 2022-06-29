@@ -4,7 +4,7 @@
 
 $primary_background_color: #4f6b6b;
 $button_background_color: beige;
-$warning_color: #faaeaa;
+$warning_color: #f58d87;
 
 
 // ==========  Mixin for Buttons ==========
@@ -110,7 +110,7 @@ html {
   .title-wrap h2 {
     font-size: 4em;
     letter-spacing: 1px;
-    text-shadow: 4px 2px rgb(218, 218, 81);
+    text-shadow: 4px 4px rgb(194, 106, 12);
   }
   
   .title-wrap img {
@@ -150,10 +150,15 @@ html {
   }
   
   #game-start h3 {
+    text-shadow: 2px 2px black;
     margin: 10px 0px 10px 0px;
+  }
+  #game-start p {
+    text-shadow: 1px 1px black;
   }
   
   #game-start label {
+    text-shadow: 1px 1px black;
     display: block;
     text-align: center;
   }
@@ -277,8 +282,8 @@ button {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: fit-content;
     padding: 10px;
     background-color: #4f6b6b;
     color: white;
@@ -303,12 +308,15 @@ button {
   }
   
   #results-popup h3 {
+    text-shadow: 2px 2px black;
     margin: 0px;
     padding: 20px;
   }
   
-  #results-pop p {
-    margin-top: 40px;
+  #results-popup p {
+    font-size: 1.5em;
+    text-shadow: 2px 2px black;
+    margin-top: 10px;
   }
   
   #results-popup button {
@@ -316,6 +324,8 @@ button {
     pointer-events: all;
   }
   .lost {
+    font-size: 1.5em;
+    text-shadow: 2px 2px black;
     color: $warning_color
   }
   
